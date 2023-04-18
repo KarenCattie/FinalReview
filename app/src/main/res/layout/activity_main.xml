@@ -4,87 +4,93 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".FirstActivity">
 
-    <TextView
-        android:id="@+id/product_name"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:text="@string/samsung_galaxy"
-        android:textAlignment="center"
-        android:textColor="#0E2FE4"
-        android:textSize="34sp"
-        android:visibility="visible"
-        app:layout_constraintBottom_toTopOf="@+id/actions"
+    <EditText
+        android:id="@+id/nameId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/name_hint"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/phoneId"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-    <LinearLayout
-        android:id="@+id/actions"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:orientation="horizontal"
-        android:visibility="visible"
-        app:layout_constraintBottom_toTopOf="@+id/description"
+    <EditText
+        android:id="@+id/phoneId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/phone_hint"
+        android:inputType="number|text|phone"
+        app:layout_constraintBottom_toTopOf="@+id/salesId"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/product_name">
-        <Button
-            android:id="@+id/priceId"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:insetLeft="8dp"
-            android:insetRight="8dp"
-            android:text="@string/price" />
+        app:layout_constraintTop_toBottomOf="@+id/nameId" />
+    <EditText
+        android:id="@+id/salesId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/sales_hint"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/scoreId"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phoneId" />
+    <EditText
+        android:id="@+id/scoreId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/score_hint"
+        android:inputType="number|numberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/websiteId"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/salesId" />
+    <EditText
+        android:id="@+id/websiteId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/website_hint"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/licenseId"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scoreId" />
+    <EditText
+        android:id="@+id/licenseId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/license_hint"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/gotoSecondId"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/websiteId" />
 
-        <Button
-            android:id="@+id/infoId"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:insetRight="8dp"
-            android:text="@string/details" />
-        <Button
-            android:id="@+id/buyId"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:insetRight="8dp"
-            android:text="@string/buy" />
-    </LinearLayout>
-    <LinearLayout
-        android:id="@+id/description"
+    <Button
+        android:id="@+id/gotoSecondId"
         android:layout_width="0dp"
-        android:layout_height="293dp"
-        android:orientation="horizontal"
-        android:visibility="visible"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/actions">
-        <ImageButton
-            android:id="@+id/phone_picture"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="fitXY"
-            android:visibility="visible"
-            tools:ignore="SpeakableTextPresentCheck"
-            tools:visibility="visible" />
-    </LinearLayout>
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="#FFEE58"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="2dp"
+        android:text="@string/next_activity"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/description" />
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="parent" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
