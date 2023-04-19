@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:icon="@android:drawable/ic_delete"
+        android:orderInCategory="300"
+        android:title="First"
+        app:showAsAction="never" />
+
+    <item
+        android:icon="@android:drawable/ic_input_add"
+        android:title="Second"
+        android:orderInCategory="200"
+        app:showAsAction="always" />
+
+    <item
+        android:icon="@android:drawable/ic_menu_revert"
+        android:title="Third"
+        android:orderInCategory="100"
+        app:showAsAction="always" />
+
+    <item
+        android:icon="@android:drawable/btn_star"
+        android:title="Fourth"
+        android:orderInCategory="250"
+        app:showAsAction="always" />
+
+</menu>
