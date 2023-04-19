@@ -22,6 +22,9 @@ public class FirstActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //TODO_1 - Create the intent here
+        Intent secondPage = new Intent(FirstActivity.this, SecondActivity.class);
+
         //TODO_3 - start the activity when the button is clicked
         Button nextPageButton = findViewById(R.id.gotoSecondId);
         nextPageButton.setOnClickListener( click ->{
@@ -29,8 +32,6 @@ public class FirstActivity extends AppCompatActivity {
             EditText phoneTextView = findViewById(R.id.phoneId);
             String phone = phoneTextView.getText().toString();
 
-            //TODO_1 - Create the intent here
-            Intent secondPage = new Intent(FirstActivity.this, SecondActivity.class);
             secondPage.putExtra(KEY_PHONE, phone);
 
             startActivity(secondPage);
